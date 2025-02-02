@@ -1,4 +1,7 @@
 import { Tabs } from 'expo-router';
+
+import { Ionicons } from '@expo/vector-icons';
+
 import React from 'react';
 import { Platform } from 'react-native';
 
@@ -38,6 +41,15 @@ export default function TabLayout() {
         options={{
           title: 'scan',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="TestCamera"
+        options={{
+          title: 'Cam',
+          
+          tabBarIcon: ({ color }) => <Ionicons name="camera-outline" size={28} color={color} />
+
         }}
       />
       <Tabs.Screen
